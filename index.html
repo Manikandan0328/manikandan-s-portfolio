@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/icon.png" type="image/png" />
+    <title>Manikandan Portfolio - Web Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/animate.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <button onclick="topFunction()" id="goToTopBtn" title="Go to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fa fa-user-circle media-left media-right-margin"></i>
+          Manikandan</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skill">Skill</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section>
+      <div class="hero" id="hero">
+        <header class="hero-section">
+          <div class="container text-center">
+            <h1 class="display-4">
+              Hello, I'm <span class="highlight">Manikandan</span>
+            </h1>
+            <p class="lead">Web Developer & Designer</p>
+            <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+            <div class="in wow fadeInUp" data-wow-delay="0.4s">
+              <a href="https://www.linkedin.com/in/mani03ms/" target="_blank">
+                <i class="fab fa-linkedin media-left media-right-margin"></i>
+              </a>
+              <a href="https://github.com/Manikandan0328" target="_blank">
+                <i class="fab fa-github media-left media-right-margin"></i>
+              </a>
+              <a href="mailto:smanikandanmani123@gmail.com">
+                <i class="fa fa-envelope media-left media-right-margin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="hero-overlay"></div>
+          <div class="hero-image">
+            <img
+              src="images/hero-image.png"
+              alt="Hero Image"
+              class="img-fluid wow fadeInUp"
+              data-wow-delay="0.4s"
+            />
+          </div>
+          <div class="hero-svg">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+              <path
+                fill="#ffcc00"
+                fill-opacity="1"
+                d="M0,160L30,176C60,192,120,224,180,208C240,192,300,128,360,106.7C420,85,480,107,540,106.7C600,107,660,85,720,101.3C780,117,840,171,900,170.7C960,171,1020,117,1080,122.7C1140,128,1200,192,1260,192C1320,192,1380,128,1410,96L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+          <div class="scroll-down">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+          </div>
+        </header>
+      </div>
+    </section>
+    <!-- end -->
+
+    <!-- WhatsApp Floating Action Button -->
+    <div class="whatsapp-fab">
+      <a href="https://wa.me/+919976008508" target="_blank">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+      <div class="container">
+        <h2
+          class="text-center animated"
+          data-animation="fadeRight"
+          data-delay="0.1s"
+        >
+          About Me
+        </h2>
+        <span
+          class="line animated"
+          data-animation="fadeLeft"
+          data-delay="0.1s"
+        ></span>
+        <p
+          class="text-center animated"
+          data-animation="fadeRight"
+          data-delay="0.1s"
+        >
+          A brief introduction about yourself..
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-md-8 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="col-md-12">
+              <p>
+                Hi there, I'm Manikandan! My journey in web development began
+                with a strong foundation in computer science. Translating that
+                knowledge into action, I'm now a passionate web developer,
+                constantly striving to bridge the gap between stunning front-end
+                design and powerful back-end functionality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light py-5">
+      <div class="container">
+        <h2
+          class="text-center animated"
+          data-animation="fadeRight"
+          data-delay="0.1s"
+        >
+          Projects
+        </h2>
+        <span
+          class="linew animated"
+          data-animation="fadeLeft"
+          data-delay="0.1s"
+        ></span>
+        <div class="row carousel-inner">
+          <!-- Project 1 -->
+          <div class="col-lg-4 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="card mb-4">
+              <img
+                src="./images/plant.jpg"
+                class="card-img-top"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">E-Flora</h5>
+                <div class="card-text">
+                  <b>Technology Used:</b> HTML, CSS, JavaScript,Bootstrap, NodeJS, MySQL.
+                  <br /> <br>
+                  <ul>
+                    <li>
+                      Plant Database: E-Flor showcases a collection of plants
+                      categorized by family and you can download pdf about the
+                      each plant family.
+                    </li>
+                    <li>
+                      QR Code Integration: Each plant entry incorporates a QR
+                      code, allowing users to access detailed information or
+                      additional resources with a scan.
+                    </li>
+                    <li>
+                      Image Gallery: The application features a photo gallery
+                      for each plant family, providing users with visual
+                      references.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="col-lg-4 wow fadeInDown" data-wow-delay="0.5s">
+            <div class="card mb-4">
+              <img
+                src="images/company.png"
+                class="card-img-top"
+                alt="Project 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Startup User Interface</h5>
+                <div class="card-text">
+                  <b>Technology Used:</b> HTML, CSS, Javascript, Bootstrap,
+                  Version Control: Git, GitHub.
+                  <br /><br>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://webtronicxinnovation.vercel.app/"
+                        style="color: #4fdde5"
+                        >Website Link. click to visit this project</a
+                      >
+                    </li>
+                    <li>
+                      Ensures optimal viewing experience across various devices
+                      (desktops, tablets, and smartphones) using a mobile-first
+                      approach.
+                    </li>
+                    <li>
+                      Designed and integrated interactive UI components such as
+                      navigation menus, buttons, forms, and animations to
+                      enhance user engagement and interactivity.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="col-lg-4 col-sm-12 d-flex justify-content-center wow fadeInUp"
+            data-wow-delay="0.5s"
+          >
+            <div class="card mb-4">
+              <img
+                src="images/portal.jpeg"
+                class="card-img-top"
+                alt="Project 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Departmental Portal</h5>
+                <div class="card-text">
+                  <b> Technology Used: </b> HTML, CSS, JavaScript,Bootstrap, PHP, MySQL.
+                  <br /> <br>
+                  <ul>
+                    <li>
+                      Developed a departmental web portal to enhance
+                      departmental processes for students and staff.
+                    </li>
+                    <li>
+                      Streamlined user registration for both students and staff,
+                      facilitating easy access. Course material management with
+                      upload and download capabilities.
+                    </li>
+                    <li>
+                      Increased departmental efficiency through automation of
+                      processes. Improved accessibility of information for
+                      students and staff.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skill -->
+    <section class="skills" id="skill" data-scroll-index="6">
+      <div class="container">
+        <div class="sectioner-header text-center">
+          <h2 class="animated" data-animation="fadeRight" data-delay="0.3s">
+            Skill
+          </h2>
+          <span
+            class="line animated"
+            data-animation="fadeLeft"
+            data-delay="0.3s"
+          ></span>
+        </div>
+
+        <!-- Front End Skills -->
+        <div class="row">
+          <div class="col-12">
+            <h4
+              class="text-center animated"
+              data-animation="fadeRight"
+              data-delay="0.3s"
+            >
+              Front End
+            </h4>
+            <div class="row">
+              <div
+                class="skill col-md-6 animated"
+                data-animation="fadeLeft"
+                data-delay="0.1s"
+              >
+                <i class="fab fa-html5"></i>
+                <div class="skill-info">
+                  <h5 class="skill-name">HTML</h5>
+                  <div class="progress">
+                    <div
+                      class="progress-bar html-bar"
+                      role="progressbar"
+                      aria-valuenow="90"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="progress-value">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="skill col-md-6 animated"
+                data-animation="fadeRight"
+                data-delay="0.1s"
+              >
+                <i class="fab fa-css3-alt"></i>
+                <div class="skill-info">
+                  <h5 class="skill-name">CSS</h5>
+                  <div class="progress">
+                    <div
+                      class="progress-bar css-bar"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="progress-value">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="skill col-md-6 animated"
+                data-animation="fadeLeft"
+                data-delay="0.1s"
+              >
+                <i class="fab fa-js"></i>
+                <div class="skill-info">
+                  <h5 class="skill-name">JavaScript</h5>
+                  <div class="progress">
+                    <div
+                      class="progress-bar js-bar"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="progress-value">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="skill col-md-6 animated"
+                data-animation="fadeRight"
+                data-delay="0.1s"
+              >
+                <i class="fab fa-react"></i>
+                <div class="skill-info">
+                  <h5 class="skill-name">React</h5>
+                  <div class="progress">
+                    <div
+                      class="progress-bar react-bar"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="progress-value">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back End Skills -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <h4
+              class="text-center animated"
+              data-animation="fadeLeft"
+              data-delay="0.3s"
+            >
+              Back End
+            </h4>
+            <div class="row">
+              <div
+                class="skill col-md-6 animated"
+                data-animation="fadeLeft"
+                data-delay="0.1s"
+              >
+                <i class="fab fa-python"></i>
+                <div class="skill-info">
+                  <h5 class="skill-name">Python</h5>
+                  <div class="progress">
+                    <div
+                      class="progress-bar python-bar"
+                      role="progressbar"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="progress-value">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="skill col-md-6 animated"
+                data-animation="fadeRight"
+                data-delay="0.1s"
+              >
+                <i class="fa fa-database"></i>
+                <div class="skill-info">
+                  <h5 class="skill-name">MySQL</h5>
+                  <div class="progress">
+                    <div
+                      class="progress-bar sql-bar"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="progress-value">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="skill col-md-6 animated"
+                data-animation="fadeLeft"
+                data-delay="0.1s"
+              >
+                <i class="fab fa-node-js"></i>
+                <div class="skill-info">
+                  <h5 class="skill-name">Node.js</h5>
+                  <div class="progress">
+                    <div
+                      class="progress-bar node-bar"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="progress-value">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="skill col-md-6 animated"
+                data-animation="fadeRight"
+                data-delay="0.1s"
+              >
+                <i class="fab fa-java"></i>
+                <div class="skill-info">
+                  <h5 class="skill-name">Java</h5>
+                  <div class="progress">
+                    <div
+                      class="progress-bar java-bar"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="progress-value">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add more skills as needed -->
+      </div>
+    </section>
+
+    <section class="contact section-padding" id="contact" data-scroll-index="7">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="sectioner-header text-center">
+              <h2 class="animated" data-animation="fadeRight" data-delay="0.3s">
+                Contact
+              </h2>
+              <span
+                class="line animated"
+                data-animation="fadeLeft"
+                data-delay="0.1s"
+              ></span>
+              <p class="animated" data-animation="fadeRight" data-delay="0.3s">
+                Excited to collaborate! Whether you have a project in mind, a
+                question about my skills, or simply want to explore creative
+                ideas, I'd love to hear from you. Reach out and let's chat about
+                bringing your vision to life!
+              </p>
+            </div>
+            <div class="section-content">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4 address">
+                  <div
+                    class="contact-info white wow fadeInUp"
+                    data-wow-delay="0.4s"
+                  >
+                    <div class="contact-item media">
+                      <i
+                        class="fa fa-map-marker-alt media-left media-right-margin"
+                      ></i>
+                      <div class="media-body">
+                        <!-- <p class="text-uppercase">Address</p> -->
+                        <p class="" id="location" style="cursor: pointer">
+                          <a
+                            href="https://maps.app.goo.gl/SFC9rDmHDfDZkfFd9"
+                            target="_blank"
+                            >Thirumayam, TN-630205</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="contact-item media">
+                      <i class="fa fa-mobile media-left media-right-margin"></i>
+                      <div class="media-body">
+                        <!-- <p class="text-uppercase">Phone</p> -->
+                        <p class="text-uppercase">
+                          <a class="text-white" href="tel:+919976008508"
+                            >9976008508</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="contact-item media">
+                      <i
+                        class="fa fa-envelope media-left media-right-margin"
+                      ></i>
+                      <div class="media-body">
+                        <!-- <p class="text-uppercase">E-mail</p> -->
+                        <p class="">
+                          <a
+                            class="text-white"
+                            href="mailto:smanikandanmani123@gmail.com"
+                            >smanikandanmani123@gmail.com</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="contact-item media">
+                      <i
+                        class="fab fa-linkedin media-left media-right-margin"
+                      ></i>
+                      <div class="media-body">
+                        <p class="">
+                          <a
+                            href="https://www.linkedin.com/in/mani03ms/"
+                            target="_blank"
+                            >Linked in</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="contact-item media">
+                      <i
+                        class="fab fa-github media-left media-right-margin"
+                      ></i>
+                      <div class="media-body">
+                        <p class="">
+                          <a
+                            href="https://github.com/Manikandan0328"
+                            target="_blank"
+                            >Github</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-8">
+                  <form id="contact_form" action="">
+                    <div class="row">
+                      <div class="col wow fadeInUp" data-wow-delay="0.2s">
+                        <input
+                          required
+                          type="text"
+                          id="your_name"
+                          class="form-input w-100"
+                          name="full-name"
+                          placeholder="Full Name"
+                          required
+                        />
+                      </div>
+                      <div class="col wow fadeInUp" data-wow-delay="0.3s">
+                        <input
+                          type="email"
+                          id="email"
+                          class="form-input w-100"
+                          name="email"
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <input
+                      type="text"
+                      id="subject"
+                      class="form-input w-100 wow fadeInUp"
+                      data-wow-delay="0.3s"
+                      name="subject"
+                      placeholder="Subject"
+                      required
+                    />
+                    <textarea
+                      class="form-input w-100 wow fadeInUp custom-placeholder"
+                      data-wow-delay="0.3s"
+                      id="message"
+                      placeholder="Message"
+                      name="message"
+                      required
+                    ></textarea>
+                    <button
+                      class="btn-grad w-100 text-uppercase wow fadeInUp"
+                      data-wow-delay="0.3s"
+                      type="button"
+                      onclick="sendEmail()"
+                    >
+                      submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------Contact End------->
+
+    <footer
+      class="bg-dark text-white text-center py-3 wow fadeInUp"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <p class="animated" data-animation="fadeUp" data-wow-delay="0.3s">
+          &copy; 2024 Manikandan. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- scrollIt js -->
+    <script src="./scripts/wow.min.js"></script>
+    <script src="./scripts/scrollIt.min.js"></script>
+    <script>
+      wow = new WOW();
+      wow.init();
+      $(document).ready(function (e) {
+        $("#video-icon").on("click", function (e) {
+          e.preventDefault();
+          $(".video-popup").css("display", "flex");
+          $(".iframe-src").slideDown();
+        });
+        $(".video-popup").on("click", function (e) {
+          var $target = e.target.nodeName;
+          var video_src = $(this).find("iframe").attr("src");
+          if ($target != "IFRAME") {
+            $(".video-popup").fadeOut();
+            $(".iframe-src").slideUp();
+            $(".video-popup iframe").attr("src", " ");
+            $(".video-popup iframe").attr("src", video_src);
+          }
+        });
+
+        $(".slider").bxSlider({
+          pager: false,
+        });
+      });
+
+      $(window).on("scroll", function () {
+        var bodyScroll = $(window).scrollTop(),
+          navbar = $(".navbar");
+
+        if (bodyScroll > 50) {
+          $(".navbar-logo img").attr("src", "images/logo-black.png");
+          navbar.addClass("nav-scroll");
+        } else {
+          $(".navbar-logo img").attr("src", "images/logo.png");
+          navbar.removeClass("nav-scroll");
+        }
+      });
+      $(window).on("load", function () {
+        var bodyScroll = $(window).scrollTop(),
+          navbar = $(".navbar");
+
+        if (bodyScroll > 50) {
+          $(".navbar-logo img").attr("src", "images/logo-black.png");
+          navbar.addClass("nav-scroll");
+        } else {
+          $(".navbar-logo img").attr("src", "images/logo-white.png");
+          navbar.removeClass("nav-scroll");
+        }
+
+        $.scrollIt({
+          easing: "swing", // the easing function for animation
+          scrollTime: 900, // how long (in ms) the animation takes
+          activeClass: "active", // class given to the active nav element
+          onPageChange: null, // function(pageIndex) that is called when page is changed
+          topOffset: -63,
+        });
+      });
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+      // JavaScript
+      document.addEventListener("DOMContentLoaded", function () {
+        // Define the scroll threshold (e.g., 30% of the viewport height)
+        const scrollThreshold = window.innerHeight * 0.3;
+
+        // Function to update skill bars
+        function updateSkillBars() {
+          // Get the scroll position
+          const scrollPosition =
+            window.scrollY ||
+            window.pageYOffset ||
+            document.documentElement.scrollTop;
+
+          // Check if the scroll position is beyond the threshold
+          if (scrollPosition > scrollThreshold) {
+            // Animate the skill bars
+            animateSkillBars();
+            // Remove the scroll event listener to prevent multiple animations
+            window.removeEventListener("scroll", updateSkillBars);
+          }
+        }
+
+        // Function to animate the skill bars
+        function animateSkillBars() {
+          // Get all progress bars
+          const progressBars = document.querySelectorAll(".progress-bar");
+          // Loop through each progress bar
+          progressBars.forEach(progressBar => {
+            // Get the target percentage for the progress bar
+            const targetPercentage = parseInt(
+              progressBar.getAttribute("aria-valuenow")
+            );
+            // Set up the animation interval
+            let currentPercentage = 0;
+            const animationInterval = setInterval(() => {
+              // Update the progress bar value
+              progressBar.style.width = currentPercentage + "%";
+              progressBar.querySelector(".progress-value").textContent =
+                currentPercentage + "%";
+              // Increment the current percentage
+              currentPercentage++;
+              // Check if reached the target percentage
+              if (currentPercentage > targetPercentage) {
+                clearInterval(animationInterval);
+              }
+            }, 10); // Change the animation speed as needed
+          });
+        }
+
+        // Add the scroll event listener
+        window.addEventListener("scroll", updateSkillBars);
+      });
+    </script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
