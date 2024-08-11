@@ -402,13 +402,26 @@ body {
   transform: translateY(-50%);
   font-weight: bold;
 }
-
+.education-section{
+  background: linear-gradient(135deg, #f5f6f8 0%, #f5f6f8 100%);
+  color: #4f4e4e;
+    padding: 0px 0;
+  text-align: center;
+  font-weight: bold;
+}
+ 
+.education-section h2{
+  padding-top: 30px;
+    font-size: 2.5rem;
+    color: #3f0083;
+    font-weight: bold;
+}
 /* Contact Section Styles */
-.contact-section {
+.contact {
   background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
   color: #393939;
   padding: 0px 0;
-  text-align: center;
+  /* text-align: center; */
   font-weight: bold;
 }
 .contact h2{
@@ -421,7 +434,7 @@ body {
 .contact form {
     margin-top: 10px;
 }
-.contact-section h2 {
+.contact h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
   font-weight: bold;
@@ -433,17 +446,17 @@ body {
   .contact-item i {
     font-size: 1rem; /* Color for the contact links */
   }
-.contact-section .form-group {
+.contact .form-group {
   margin-bottom: 1.5rem;
 }
  
-.contact-section .btn {
+.contact .btn {
   background-color: #ffcc00;
   border: none;
   transition: background-color 0.3s ease;
 }
 
-.contact-section .btn:hover {
+.contact .btn:hover {
   background-color: #e6b800;
 }
 .contact .sectioner-header p{
@@ -453,6 +466,7 @@ body {
   box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.596);
   backdrop-filter: blur(10px);
   color: #6e6e6e;
+  font-weight: lighter;
 
 }
 /* General Section Styles */
