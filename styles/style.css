@@ -836,6 +836,24 @@ footer {
   .skill i {
     font-size: 1.5rem;
   }
+
+  
+   
+  .education-section h2{
+    padding-top: 10px;
+    font-size: 1.8rem;
+   
+  }
+  .education-section h4{
+    padding-top: 10px;
+    font-size: 1.2rem;
+   
+  }
+  .education-section p{
+    font-size: 0.8rem;
+   
+  }
+
   .projects-section .card-img-top {
     height: auto;
     border-radius: 10px 10px 0 0;
