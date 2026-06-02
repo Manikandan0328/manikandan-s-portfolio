@@ -177,10 +177,6 @@ function initTypingEffect() {
 
   const phrases = [
     'Software Engineer',
-    'ASP.NET Developer',
-    'Full Stack Developer',
-    'Problem Solver',
-    'UI/UX Enthusiast',
   ];
 
   let phraseIdx = 0;
