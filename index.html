@@ -1,872 +1,757 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/icon.png" type="image/png" />
-    <title>Manikandan Portfolio - Web Developer</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./styles/animate.css" />
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Manikandan – Software Engineer at Splendin Software, Chennai. Specializing in modern web applications, scalable backend systems, and enterprise software." />
+  <meta name="keywords" content="Manikandan, Software Engineer, ASP.NET, C#, Web Developer, Chennai, India" />
+  <title>Manikandan | Software Engineer</title>
 
-    <link rel="stylesheet" href="./styles/style.css" />
-  </head>
-  <body>
-    <button onclick="topFunction()" id="goToTopBtn" title="Go to top">
-      <i class="fas fa-chevron-up"></i>
-    </button>
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Navigation Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <i class="fa fa-user-circle media-left media-right-margin"></i>
-          Manikandan</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#hero">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skill">Skill</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
 
-    <!-- Hero Section -->
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
 
-    <section>
-      <div class="hero" id="hero">
-        <header class="hero-section">
-          <div class="container text-center">
-            <h1 class="display-4">
-              Hello, I'm <span class="highlight">Manikandan</span>
-            </h1>
-            <p class="lead">Web Developer & Designer</p>
-            <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
-            <div class="in wow fadeInUp" data-wow-delay="0.4s">
-              <a href="https://www.linkedin.com/in/mani03ms/" target="_blank">
-                <i class="fab fa-linkedin media-left media-right-margin"></i>
-              </a>
-              <a href="https://github.com/Manikandan0328" target="_blank">
-                <i class="fab fa-github media-left media-right-margin"></i>
-              </a>
-              <a href="mailto:smanikandanmani123@gmail.com">
-                <i class="fa fa-envelope media-left media-right-margin"></i>
-              </a>
-            </div>
-          </div>
-          <div class="hero-overlay"></div>
-          <div class="hero-image">
-            <img
-              src="images/hero-image.png"
-              alt="Hero Image"
-              class="img-fluid wow fadeInUp"
-              data-wow-delay="0.4s"
-            />
-          </div>
-          <div class="hero-svg">
-            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-              <path
-                fill="#ffcc00"
-                fill-opacity="1"
-                d="M0,160L30,176C60,192,120,224,180,208C240,192,300,128,360,106.7C420,85,480,107,540,106.7C600,107,660,85,720,101.3C780,117,840,171,900,170.7C960,171,1020,117,1080,122.7C1140,128,1200,192,1260,192C1320,192,1380,128,1410,96L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
-          <div class="scroll-down">
-            <a href="#about"><i class="fas fa-chevron-down"></i></a>
-          </div>
-        </header>
-      </div>
-    </section>
-    <!-- end -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <!-- WhatsApp Floating Action Button -->
-    <div class="whatsapp-fab">
-      <a href="https://wa.me/+919976008508" target="_blank">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-      </a>
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ========== CANVAS BACKGROUND ========== -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="#home">
+      <span class="brand-icon">M</span>
+      <span class="brand-text">anikandan</span>
+    </a>
+
+    <div class="d-flex align-items-center gap-3 ms-auto order-lg-3">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section py-5">
-      <div class="container">
-        <h2
-          class="text-center animated"
-          data-animation="fadeRight"
-          data-delay="0.1s"
-        >
-          About Me
-        </h2>
-        <span
-          class="line animated"
-          data-animation="fadeLeft"
-          data-delay="0.1s"
-        ></span>
-        <p
-          class="text-center animated"
-          data-animation="fadeRight"
-          data-delay="0.1s"
-        >
-          A brief introduction about yourself..
+    <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+      <ul class="navbar-nav mx-auto gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero-section" id="home">
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-orb orb-3"></div>
+
+  <div class="container hero-container">
+    <div class="row align-items-center min-vh-100 py-5">
+      <div class="col-lg-7 hero-text-col">
+       
+        <p class="hero-greeting" data-aos="fade-up" data-aos-delay="150">Hello, I'm</p>
+        <h1 class="hero-name" data-aos="fade-up" data-aos-delay="200">
+          <span class="name-gradient">Manikandan</span>
+        </h1>
+        <div class="hero-role" data-aos="fade-up" data-aos-delay="250">
+          <span class="role-prefix">—</span>
+          <span id="typedText"></span><span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-desc" data-aos="fade-up" data-aos-delay="300">
+          Passionate Software Engineer specializing in modern web applications, scalable backend systems, and user-centric digital experiences.
         </p>
-        <div class="row justify-content-center">
-          <div class="col-md-8 wow fadeInUp" data-wow-delay="0.4s">
-            <div class="col-md-12">
-              <p>
-                Hi there, I'm Manikandan! My journey in web development began
-                with a strong foundation in computer science. Translating that
-                knowledge into action, I'm now a passionate web developer,
-                constantly striving to bridge the gap between stunning front-end
-                design and powerful back-end functionality.
-              </p>
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="350">
+          <a href="./Manikandan_Resume.pdf"  class="btn-primary-hero" download target="_blank">
+            <i class="fas fa-download me-2"></i>Download Resume
+          </a>
+          <a href="#projects" class="btn-outline-hero">
+            View Projects <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+        <div class="hero-socials" data-aos="fade-up" data-aos-delay="400">
+          <a href="https://www.linkedin.com/in/mani03ms/" target="_blank" class="social-pill" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Manikandan0328" target="_blank" class="social-pill" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:smanikandanmani123@gmail.com" class="social-pill" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-5 hero-visual-col" data-aos="fade-left" data-aos-delay="300">
+        <div class="hero-visual">
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <div class="avatar-initials">MS</div>
+            </div>
+          </div>
+          <!-- Floating tech badges -->
+          <div class="tech-badge badge-1"><i class="fas fa-code"></i> C#</div>
+          <div class="tech-badge badge-2"><i class="fas fa-database"></i> MongoDB</div>
+          <div class="tech-badge badge-3"><i class="fab fa-js"></i> Java Script</div>
+          <div class="tech-badge badge-4"><i class="fab fa-git-alt"></i> Git</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="section-pad" id="about">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Who I Am</span>
+      <h2 class="section-title">About <span class="text-accent">Me</span></h2>
+    </div>
+
+    <div class="row g-5 align-items-center mt-2">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="about-card glass-card">
+          <div class="about-card-header">
+            <div class="about-avatar">MS</div>
+            <div>
+              <h4 class="mb-0">Manikandan</h4>
+              <p class="text-muted-custom mb-0">Software Engineer</p>
+            </div>
+          </div>
+          <hr class="divider" />
+          <div class="about-info-list">
+            <div class="info-item">
+              <i class="fas fa-building"></i>
+              <span>Splendin Software Pvt. Ltd.</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Chennai, Tamil Nadu, India</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>MCA – Alagappa University</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>smanikandanmani123@gmail.com</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 9976008508</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section bg-light py-5">
-      <div class="container">
-        <h2
-          class="text-center animated"
-          data-animation="fadeRight"
-          data-delay="0.1s"
-        >
-          Projects
-        </h2>
-        <span
-          class="linew animated"
-          data-animation="fadeLeft"
-          data-delay="0.1s"
-        ></span>
-        <div class="row carousel-inner">
-          <!-- Project 1 -->
-          <div class="col-lg-4 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="card mb-4">
-              <img
-                src="./images/plant.jpg"
-                class="card-img-top"
-                alt="Project 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">E-Flora</h5>
-                <div class="card-text">
-                  <b>Technology Used:</b> HTML, CSS, JavaScript,Bootstrap,
-                  NodeJS, MySQL. <br />
-                  <br />
-                  <ul>
-                    <li>
-                      <a
-                        href="https://e-flora-plants-family.vercel.app/"
-                        style="color: #4fdde5"
-                        >Website Link. click to visit this project</a
-                      >
-                    </li>
-                    <li>
-                      Plant Database: E-Flor showcases a collection of plants
-                      categorized by family and you can download pdf about the
-                      each plant family.
-                    </li>
-                    <li>
-                      QR Code Integration: Each plant entry incorporates a QR
-                      code, allowing users to access detailed information.
-                    </li>
-                    <li>
-                      Image Gallery: The application features a photo gallery
-                      for each plant family, providing users with visual
-                      references.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Project 2 -->
-          <div class="col-lg-4 wow fadeInDown" data-wow-delay="0.5s">
-            <div class="card mb-4">
-              <img
-                src="images/company.png"
-                class="card-img-top"
-                alt="Project 2"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Startup User Interface</h5>
-                <div class="card-text">
-                  <b>Technology Used:</b> HTML, CSS, Javascript, Bootstrap,
-                  Version Control: Git, GitHub. <br /><br />
-                  <ul>
-                    <li>
-                      <!--<a
-                        href="https://webtronicxinnovation.vercel.app/"
-                        style="color: #4fdde5"
-                        >Website Link. click to visit this project</a
-                      >-->
-                    </li>
-                    <li>
-                      Ensures optimal viewing experience across various devices
-                      (desktops, tablets, and smartphones) using a mobile-first
-                      approach.
-                    </li>
-                    <li>
-                      Designed and integrated interactive UI components such as
-                      navigation menus, buttons, forms, and animations to
-                      enhance user engagement and interactivity.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Project 3 -->
-          <div
-            class="col-lg-4 col-sm-12 d-flex justify-content-center wow fadeInUp"
-            data-wow-delay="0.5s"
-          >
-            <div class="card mb-4">
-              <img
-                src="images/portal.jpeg"
-                class="card-img-top"
-                alt="Project 3"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Departmental Portal</h5>
-                <div class="card-text">
-                  <b> Technology Used: </b> HTML, CSS, JavaScript,Bootstrap,
-                  PHP, MySQL. <br />
-                  <br />
-                  <ul>
-                    <li>
-                      Developed a departmental web portal to enhance
-                      departmental processes for students and staff.
-                    </li>
-                    <li>
-                      Streamlined user registration for both students and staff,
-                      facilitating easy access. Course material management with
-                      upload and download capabilities.
-                    </li>
-                    <li>
-                      Increased departmental efficiency through automation of
-                      processes. Improved accessibility of information for
-                      students and staff.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- skill -->
-    <section class="skills" id="skill" data-scroll-index="6">
-      <div class="container">
-        <div class="sectioner-header text-center">
-          <h2 class="animated" data-animation="fadeRight" data-delay="0.3s">
-            Skill
-          </h2>
-          <span
-            class="line animated"
-            data-animation="fadeLeft"
-            data-delay="0.3s"
-          ></span>
-        </div>
-
-        <!-- Front End Skills -->
-        <div class="row">
-          <div class="col-12">
-            <h4
-              class="text-center animated"
-              data-animation="fadeRight"
-              data-delay="0.3s"
-            >
-              Front End
-            </h4>
-            <div class="row">
-              <div
-                class="skill col-md-6 animated"
-                data-animation="fadeLeft"
-                data-delay="0.1s"
-              >
-                <i class="fab fa-html5"></i>
-                <div class="skill-info">
-                  <h5 class="skill-name">HTML</h5>
-                  <div class="progress">
-                    <div
-                      class="progress-bar html-bar"
-                      role="progressbar"
-                      aria-valuenow="90"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <span class="progress-value">0%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="skill col-md-6 animated"
-                data-animation="fadeRight"
-                data-delay="0.1s"
-              >
-                <i class="fab fa-css3-alt"></i>
-                <div class="skill-info">
-                  <h5 class="skill-name">CSS</h5>
-                  <div class="progress">
-                    <div
-                      class="progress-bar css-bar"
-                      role="progressbar"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <span class="progress-value">0%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="skill col-md-6 animated"
-                data-animation="fadeLeft"
-                data-delay="0.1s"
-              >
-                <i class="fab fa-js"></i>
-                <div class="skill-info">
-                  <h5 class="skill-name">JavaScript</h5>
-                  <div class="progress">
-                    <div
-                      class="progress-bar js-bar"
-                      role="progressbar"
-                      aria-valuenow="70"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <span class="progress-value">0%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="skill col-md-6 animated"
-                data-animation="fadeRight"
-                data-delay="0.1s"
-              >
-                <i class="fab fa-react"></i>
-                <div class="skill-info">
-                  <h5 class="skill-name">React</h5>
-                  <div class="progress">
-                    <div
-                      class="progress-bar react-bar"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <span class="progress-value">0%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Back End Skills -->
-        <div class="row mt-5">
-          <div class="col-12">
-            <h4
-              class="text-center animated"
-              data-animation="fadeLeft"
-              data-delay="0.3s"
-            >
-              Back End
-            </h4>
-            <div class="row">
-              <div
-                class="skill col-md-6 animated"
-                data-animation="fadeLeft"
-                data-delay="0.1s"
-              >
-                <i class="fab fa-python"></i>
-                <div class="skill-info">
-                  <h5 class="skill-name">Python</h5>
-                  <div class="progress">
-                    <div
-                      class="progress-bar python-bar"
-                      role="progressbar"
-                      aria-valuenow="85"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <span class="progress-value">0%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="skill col-md-6 animated"
-                data-animation="fadeRight"
-                data-delay="0.1s"
-              >
-                <i class="fa fa-database"></i>
-                <div class="skill-info">
-                  <h5 class="skill-name">MySQL</h5>
-                  <div class="progress">
-                    <div
-                      class="progress-bar sql-bar"
-                      role="progressbar"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <span class="progress-value">0%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="skill col-md-6 animated"
-                data-animation="fadeLeft"
-                data-delay="0.1s"
-              >
-                <i class="fab fa-node-js"></i>
-                <div class="skill-info">
-                  <h5 class="skill-name">Node.js</h5>
-                  <div class="progress">
-                    <div
-                      class="progress-bar node-bar"
-                      role="progressbar"
-                      aria-valuenow="65"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <span class="progress-value">0%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="skill col-md-6 animated"
-                data-animation="fadeRight"
-                data-delay="0.1s"
-              >
-                <i class="fab fa-java"></i>
-                <div class="skill-info">
-                  <h5 class="skill-name">Java</h5>
-                  <div class="progress">
-                    <div
-                      class="progress-bar java-bar"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <span class="progress-value">0%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <br />
-        <!-- Add more skills as needed -->
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="education-section py-5" id="education">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="animated" data-animation="fadeRight" data-delay="0.3s">
-            Education
-          </h2>
-          <span
-            class="line animated"
-            data-animation="fadeLeft"
-            data-delay="0.3s"
-          ></span>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="education-item mb-4 wow fadeInUp" data-wow-delay="0.4s">
-              <h4 class="degree">Master of Computer Application (MCA)</h4>
-              <p class="institution">Alagappa University,Karaikudi</p>
-              <p class="year">2023-2025</p>
-              <!-- <p class="details">
-                Throughout my MCA program, I specialized in areas such as
-                software engineering, advanced algorithms, and artificial
-                intelligence. My coursework included extensive hands-on projects
-                where I developed scalable applications and conducted research
-                on AI-driven solutions. I also completed a capstone project
-                focused on the development of a personalized e-learning platform
-                utilizing AI, which enhanced my understanding of user-centered
-                design and data-driven decision-making.
-              </p> -->
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="education-item mb-4 wow fadeInUp" data-wow-delay="0.5s">
-              <h4 class="degree">Bachelor of Computer Science (B.Sc.)</h4>
-              <p class="institution">
-                JJ College of Arts and Science, Pudukkottai
-              </p>
-              <p class="year">2020 - 2023</p>
-              <!-- <p class="details">
-                Developed a solid foundation in computer science principles,
-                with coursework in algorithms, data structures, and web
-                technologies. Engaged in various projects that honed
-                problem-solving and programming skills.
-              </p> -->
-            </div>
-          </div>
-          <!-- Add more education items as needed -->
-        </div>
-      </div>
-    </section>
-
-    <section class="contact section-padding" id="contact" data-scroll-index="7">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="sectioner-header text-center">
-              <h2 class="animated" data-animation="fadeRight" data-delay="0.3s">
-                Contact
-              </h2>
-              <span
-                class="line animated"
-                data-animation="fadeLeft"
-                data-delay="0.1s"
-              ></span>
-              <p class="animated" data-animation="fadeRight" data-delay="0.3s">
-                Excited to collaborate! Whether you have a project in mind, a
-                question about my skills, or simply want to explore creative
-                ideas, I'd love to hear from you. Reach out and let's chat about
-                bringing your vision to life!
-              </p>
-            </div>
-            <div class="section-content">
-              <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-4 address">
-                  <div
-                    class="contact-info white wow fadeInUp"
-                    data-wow-delay="0.4s"
-                  >
-                    <div class="contact-item media">
-                      <i
-                        class="fa fa-map-marker-alt media-left media-right-margin"
-                      ></i>
-                      <div class="media-body">
-                        <!-- <p class="text-uppercase">Address</p> -->
-                        <p class="" id="location" style="cursor: pointer">
-                          <a
-                            href="https://maps.app.goo.gl/SFC9rDmHDfDZkfFd9"
-                            target="_blank"
-                            >Thirumayam, TN-630205</a
-                          >
-                        </p>
-                      </div>
-                    </div>
-                    <div class="contact-item media">
-                      <i class="fa fa-mobile media-left media-right-margin"></i>
-                      <div class="media-body">
-                        <!-- <p class="text-uppercase">Phone</p> -->
-                        <p class="text-uppercase">
-                          <a class="text-white" href="tel:+919976008508"
-                            >9976008508</a
-                          >
-                        </p>
-                      </div>
-                    </div>
-                    <div class="contact-item media">
-                      <i
-                        class="fa fa-envelope media-left media-right-margin"
-                      ></i>
-                      <div class="media-body">
-                        <!-- <p class="text-uppercase">E-mail</p> -->
-                        <p class="">
-                          <a
-                            class="text-white"
-                            href="mailto:smanikandanmani123@gmail.com"
-                            >smanikandanmani123@gmail.com</a
-                          >
-                        </p>
-                      </div>
-                    </div>
-                    <div class="contact-item media">
-                      <i
-                        class="fab fa-linkedin media-left media-right-margin"
-                      ></i>
-                      <div class="media-body">
-                        <p class="">
-                          <a
-                            href="https://www.linkedin.com/in/mani03ms/"
-                            target="_blank"
-                            >Linked in</a
-                          >
-                        </p>
-                      </div>
-                    </div>
-                    <div class="contact-item media">
-                      <i
-                        class="fab fa-github media-left media-right-margin"
-                      ></i>
-                      <div class="media-body">
-                        <p class="">
-                          <a
-                            href="https://github.com/Manikandan0328"
-                            target="_blank"
-                            >Github</a
-                          >
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-12 col-md-12 col-lg-8">
-                  <form id="contact_form" action="">
-                    <div class="row">
-                      <div class="col wow fadeInUp" data-wow-delay="0.2s">
-                        <input
-                          required
-                          type="text"
-                          id="your_name"
-                          class="form-input w-100"
-                          name="full-name"
-                          placeholder="Full Name"
-                          required
-                        />
-                      </div>
-                      <div class="col wow fadeInUp" data-wow-delay="0.3s">
-                        <input
-                          type="email"
-                          id="email"
-                          class="form-input w-100"
-                          name="email"
-                          placeholder="Email"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <input
-                      type="text"
-                      id="subject"
-                      class="form-input w-100 wow fadeInUp"
-                      data-wow-delay="0.3s"
-                      name="subject"
-                      placeholder="Subject"
-                      required
-                    />
-                    <textarea
-                      class="form-input w-100 wow fadeInUp custom-placeholder"
-                      data-wow-delay="0.3s"
-                      id="message"
-                      placeholder="Message"
-                      name="message"
-                      required
-                    ></textarea>
-                    <button
-                      class="btn-grad w-100 text-uppercase wow fadeInUp"
-                      data-wow-delay="0.3s"
-                      type="button"
-                      onclick="sendEmail()"
-                    >
-                      submit
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-------Contact End------->
-
-    <footer
-      class="bg-dark text-white text-center py-3 wow fadeInUp"
-      data-wow-delay="0.1s"
-    >
-      <div class="container">
-        <p class="animated" data-animation="fadeUp" data-wow-delay="0.3s">
-          &copy; 2024 Manikandan. All Rights Reserved.
+      <div class="col-lg-7" data-aos="fade-left">
+        <p class="about-text">
+          I'm a <strong>Software Engineer</strong> at Splendin Software Private Limited, Chennai, with a strong foundation in web development, software engineering, and problem-solving.
         </p>
+        <p class="about-text">
+          My journey started with Computer Science and evolved into building scalable web applications, responsive user interfaces, and enterprise software solutions. I enjoy learning modern technologies, optimizing performance, and creating impactful digital products that solve real-world business problems.
+        </p>
+
+        <div class="stats-grid mt-4">
+          <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-number" data-count="1">0</div>
+            <div class="stat-label">Year Experience</div>
+          </div>
+          <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="stat-number" data-count="15">0</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="stat-number" data-count="100">0</div>
+            <div class="stat-label">% Dedication</div>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+  </div>
+</section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- ========== EXPERIENCE ========== -->
+<section class="section-pad section-alt" id="experience">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">My Journey</span>
+      <h2 class="section-title">Work <span class="text-accent">Experience</span></h2>
+    </div>
 
-    <!-- scrollIt js -->
-    <script src="./scripts/wow.min.js"></script>
-    <script src="./scripts/scrollIt.min.js"></script>
-    <script>
-      wow = new WOW();
-      wow.init();
-      $(document).ready(function (e) {
-        $("#video-icon").on("click", function (e) {
-          e.preventDefault();
-          $(".video-popup").css("display", "flex");
-          $(".iframe-src").slideDown();
-        });
-        $(".video-popup").on("click", function (e) {
-          var $target = e.target.nodeName;
-          var video_src = $(this).find("iframe").attr("src");
-          if ($target != "IFRAME") {
-            $(".video-popup").fadeOut();
-            $(".iframe-src").slideUp();
-            $(".video-popup iframe").attr("src", " ");
-            $(".video-popup iframe").attr("src", video_src);
-          }
-        });
+    <div class="timeline mt-5">
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-header">
+            <div class="company-badge">
+              <div class="company-logo-ph">S</div>
+              <div>
+                <h4 class="job-title">Software Engineer</h4>
+                <p class="company-name">Splendin Software Private Limited</p>
+              </div>
+            </div>
+            <div class="job-meta">
+              <span class="job-location"><i class="fas fa-map-marker-alt me-1"></i>Chennai, TN</span>
+              <span class="job-period"><i class="fas fa-calendar me-1"></i>2026 – Present</span>
+            </div>
+          </div>
+          <div class="job-desc">
+            <div class="responsibility-grid">
+              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Developing enterprise-grade web applications</span></div>
+              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Building scalable backend solutions</span></div>
+              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Implementing secure authentication systems</span></div>
+              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Developing responsive user interfaces</span></div>
+              <div class="resp-item"><i class="fas fa-check-circle"></i><span>API Integration and Optimization</span></div>
+              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Database Design and Management</span></div>
+              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Bug Fixing and Performance Enhancement</span></div>
+              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Agile Development Practices</span></div>
+            </div>
+          </div>
+          <div class="tech-tags mt-3">
+            <span class="tech-tag">ASP.NET Core</span>
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        $(".slider").bxSlider({
-          pager: false,
-        });
-      });
+<!-- ========== SKILLS ========== -->
+<section class="section-pad" id="skills">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">My Toolkit</span>
+      <h2 class="section-title">Technical <span class="text-accent">Skills</span></h2>
+    </div>
 
-      $(window).on("scroll", function () {
-        var bodyScroll = $(window).scrollTop(),
-          navbar = $(".navbar");
+    <div class="skills-tabs mt-5" data-aos="fade-up">
+      <div class="skills-tab-buttons">
+        <button class="skills-tab-btn active" data-tab="frontend">Frontend</button>
+        <button class="skills-tab-btn" data-tab="backend">Backend</button>
+        <button class="skills-tab-btn" data-tab="database">Database</button>
+        <button class="skills-tab-btn" data-tab="tools">Tools</button>
+        <button class="skills-tab-btn" data-tab="concepts">Concepts</button>
+      </div>
 
-        if (bodyScroll > 50) {
-          $(".navbar-logo img").attr("src", "images/logo-black.png");
-          navbar.addClass("nav-scroll");
-        } else {
-          $(".navbar-logo img").attr("src", "images/logo.png");
-          navbar.removeClass("nav-scroll");
-        }
-      });
-      $(window).on("load", function () {
-        var bodyScroll = $(window).scrollTop(),
-          navbar = $(".navbar");
+      <div class="skills-tab-content active" id="tab-frontend">
+        <div class="skills-grid">
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#E44D26"><i class="fab fa-html5"></i></div>
+              <span class="skill-name">HTML5</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:90%;--clr:#E44D26"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#264DE4"><i class="fab fa-css3-alt"></i></div>
+              <span class="skill-name">CSS3</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%;--clr:#264DE4"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#F0DB4F"><i class="fab fa-js-square"></i></div>
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:80%;--clr:#F0DB4F"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#7952B3"><i class="fab fa-bootstrap"></i></div>
+              <span class="skill-name">Bootstrap</span>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:88%;--clr:#7952B3"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="250">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#06B6D4"><i class="fas fa-mobile-alt"></i></div>
+              <span class="skill-name">Responsive Design</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:90%;--clr:#06B6D4"></div></div>
+          </div>
+        </div>
+      </div>
 
-        if (bodyScroll > 50) {
-          $(".navbar-logo img").attr("src", "images/logo-black.png");
-          navbar.addClass("nav-scroll");
-        } else {
-          $(".navbar-logo img").attr("src", "images/logo-white.png");
-          navbar.removeClass("nav-scroll");
-        }
+      <div class="skills-tab-content" id="tab-backend">
+        <div class="skills-grid">
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#512BD4"><i class="fas fa-layer-group"></i></div>
+              <span class="skill-name">ASP.NET MVC</span>
+              <span class="skill-pct">82%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:82%;--clr:#512BD4"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#7B2D8B"><i class="fas fa-rocket"></i></div>
+              <span class="skill-name">ASP.NET Core</span>
+              <span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:78%;--clr:#7B2D8B"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#178600"><i class="fas fa-code"></i></div>
+              <span class="skill-name">C#</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:80%;--clr:#178600"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#4F46E5"><i class="fas fa-plug"></i></div>
+              <span class="skill-name">REST API</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:75%;--clr:#4F46E5"></div></div>
+          </div>
+        </div>
+      </div>
 
-        $.scrollIt({
-          easing: "swing", // the easing function for animation
-          scrollTime: 900, // how long (in ms) the animation takes
-          activeClass: "active", // class given to the active nav element
-          onPageChange: null, // function(pageIndex) that is called when page is changed
-          topOffset: -63,
-        });
-      });
-    </script>
+      <div class="skills-tab-content" id="tab-database">
+        <div class="skills-grid">
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#CC2927"><i class="fas fa-database"></i></div>
+              <span class="skill-name">MongoDB Compass</span>
+              <span class="skill-pct">82%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:82%;--clr:#CC2927"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#00758F"><i class="fas fa-table"></i></div>
+              <span class="skill-name">MySQL</span>
+              <span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:78%;--clr:#00758F"></div></div>
+          </div>
+        </div>
+      </div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-      // JavaScript
-      document.addEventListener("DOMContentLoaded", function () {
-        // Define the scroll threshold (e.g., 30% of the viewport height)
-        const scrollThreshold = window.innerHeight * 0.3;
+      <div class="skills-tab-content" id="tab-tools">
+        <div class="skills-grid">
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#F05032"><i class="fab fa-git-alt"></i></div>
+              <span class="skill-name">Git</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:80%;--clr:#F05032"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#181717"><i class="fab fa-github"></i></div>
+              <span class="skill-name">GitHub</span>
+              <span class="skill-pct">82%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:82%;--clr:#8B5CF6"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#0078D4"><i class="fas fa-terminal"></i></div>
+              <span class="skill-name">Visual Studio</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%;--clr:#0078D4"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#007ACC"><i class="fas fa-code"></i></div>
+              <span class="skill-name">VS Code</span>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:88%;--clr:#007ACC"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="250">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#205081"><i class="fas fa-code-branch"></i></div>
+              <span class="skill-name">SourceTree</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:75%;--clr:#205081"></div></div>
+          </div>
+        </div>
+      </div>
 
-        // Function to update skill bars
-        function updateSkillBars() {
-          // Get the scroll position
-          const scrollPosition =
-            window.scrollY ||
-            window.pageYOffset ||
-            document.documentElement.scrollTop;
+      <div class="skills-tab-content" id="tab-concepts">
+        <div class="skills-grid">
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#4F46E5"><i class="fas fa-lock"></i></div>
+              <span class="skill-name">Authentication & Authorization</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:80%;--clr:#4F46E5"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#06B6D4"><i class="fas fa-cubes"></i></div>
+              <span class="skill-name">MVC Architecture</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%;--clr:#06B6D4"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#8B5CF6"><i class="fas fa-shapes"></i></div>
+              <span class="skill-name">OOP Concepts</span>
+              <span class="skill-pct">82%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:82%;--clr:#8B5CF6"></div></div>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="--clr:#10B981"><i class="fas fa-puzzle-piece"></i></div>
+              <span class="skill-name">Problem Solving</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%;--clr:#10B981"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-          // Check if the scroll position is beyond the threshold
-          if (scrollPosition > scrollThreshold) {
-            // Animate the skill bars
-            animateSkillBars();
-            // Remove the scroll event listener to prevent multiple animations
-            window.removeEventListener("scroll", updateSkillBars);
-          }
-        }
+<!-- ========== PROJECTS ========== -->
+<section class="section-pad section-alt" id="projects">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">What I've Built</span>
+      <h2 class="section-title">Featured <span class="text-accent">Projects</span></h2>
+    </div>
 
-        // Function to animate the skill bars
-        function animateSkillBars() {
-          // Get all progress bars
-          const progressBars = document.querySelectorAll(".progress-bar");
-          // Loop through each progress bar
-          progressBars.forEach(progressBar => {
-            // Get the target percentage for the progress bar
-            const targetPercentage = parseInt(
-              progressBar.getAttribute("aria-valuenow")
-            );
-            // Set up the animation interval
-            let currentPercentage = 0;
-            const animationInterval = setInterval(() => {
-              // Update the progress bar value
-              progressBar.style.width = currentPercentage + "%";
-              progressBar.querySelector(".progress-value").textContent =
-                currentPercentage + "%";
-              // Increment the current percentage
-              currentPercentage++;
-              // Check if reached the target percentage
-              if (currentPercentage > targetPercentage) {
-                clearInterval(animationInterval);
-              }
-            }, 10); // Change the animation speed as needed
-          });
-        }
+    <div class="row g-4 mt-3">
 
-        // Add the scroll event listener
-        window.addEventListener("scroll", updateSkillBars);
-      });
-    </script>
-    <script src="./scripts/script.js"></script>
-  </body>
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card glass-card h-100">
+          <div class="project-img-wrap">
+            <div class="project-img-ph" style="--c1:#4F46E5;--c2:#06B6D4">
+              <i class="fas fa-leaf project-icon"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="proj-btn"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
+              <a href="https://github.com/Manikandan0328" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github me-1"></i>GitHub</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">E-Flora</h4>
+            <p class="project-desc">A comprehensive plant database with QR integration, PDF download support, and fully responsive design for easy access across all devices.</p>
+            <div class="project-features">
+              <span><i class="fas fa-check"></i> Plant database</span>
+              <span><i class="fas fa-check"></i> QR integration</span>
+              <span><i class="fas fa-check"></i> PDF download</span>
+            </div>
+            <div class="tech-tags mt-3">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card glass-card h-100">
+          <div class="project-img-wrap">
+            <div class="project-img-ph" style="--c1:#8B5CF6;--c2:#4F46E5">
+              <i class="fas fa-rocket project-icon"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="proj-btn"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
+              <a href="https://github.com/Manikandan0328" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github me-1"></i>GitHub</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Startup User Interface</h4>
+            <p class="project-desc">A modern corporate website with mobile-first design philosophy and rich interactive UI components for startup brand presentation.</p>
+            <div class="project-features">
+              <span><i class="fas fa-check"></i> Corporate website</span>
+              <span><i class="fas fa-check"></i> Mobile-first</span>
+              <span><i class="fas fa-check"></i> Interactive UI</span>
+            </div>
+            <div class="tech-tags mt-3">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card glass-card h-100">
+          <div class="project-img-wrap">
+            <div class="project-img-ph" style="--c1:#06B6D4;--c2:#0891B2">
+              <i class="fas fa-university project-icon"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="proj-btn"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
+              <a href="https://github.com/Manikandan0328" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github me-1"></i>GitHub</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Departmental Portal</h4>
+            <p class="project-desc">Full-featured academic portal with student management, staff portal, material sharing system, and secure authentication.</p>
+            <div class="project-features">
+              <span><i class="fas fa-check"></i> Student management</span>
+              <span><i class="fas fa-check"></i> Staff portal</span>
+              <span><i class="fas fa-check"></i> Authentication</span>
+            </div>
+            <div class="tech-tags mt-3">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== EDUCATION ========== -->
+<section class="section-pad" id="education">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Academic Background</span>
+      <h2 class="section-title">My <span class="text-accent">Education</span></h2>
+    </div>
+
+    <div class="edu-timeline mt-5">
+
+      <div class="edu-item" data-aos="fade-right" data-aos-delay="100">
+        <div class="edu-marker">
+          <div class="edu-dot"></div>
+          <div class="edu-line"></div>
+        </div>
+        <div class="edu-card glass-card">
+          <div class="edu-badge">Postgraduate</div>
+          <h4 class="edu-degree">Master of Computer Applications (MCA)</h4>
+          <p class="edu-institution"><i class="fas fa-university me-2"></i>Alagappa University</p>
+          <div class="edu-period"><i class="fas fa-calendar-alt me-2"></i>2023 – 2025</div>
+          <p class="edu-desc">Advanced studies in software engineering, data structures, algorithms, database management, and enterprise application development.</p>
+          <div class="tech-tags mt-3">
+            <span class="tech-tag">Software Engineering</span>
+            <span class="tech-tag">Data Structures</span>
+            <span class="tech-tag">DBMS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-item" data-aos="fade-right" data-aos-delay="200">
+        <div class="edu-marker">
+          <div class="edu-dot"></div>
+        </div>
+        <div class="edu-card glass-card">
+          <div class="edu-badge" style="--badge-clr:#06B6D4">Undergraduate</div>
+          <h4 class="edu-degree">Bachelor of Science in Computer Science (B.Sc.)</h4>
+          <p class="edu-institution"><i class="fas fa-university me-2"></i>JJ College of Arts and Science</p>
+          <div class="edu-period"><i class="fas fa-calendar-alt me-2"></i>2020 – 2023</div>
+          <p class="edu-desc">Foundational studies in computer science, programming fundamentals, web technologies, and problem-solving methodologies.</p>
+          <div class="tech-tags mt-3">
+            <span class="tech-tag">Programming</span>
+            <span class="tech-tag">Web Technologies</span>
+            <span class="tech-tag">Mathematics</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="section-pad section-alt" id="contact">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Let's <span class="text-accent">Connect</span></h2>
+    </div>
+
+    <div class="row g-5 mt-2">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="contact-info glass-card">
+          <h4 class="mb-4">Contact Information</h4>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <span class="contact-label">Location</span>
+              <p>Chennai, Tamil Nadu, India</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:smanikandanmani123@gmail.com">smanikandanmani123@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+919976008508">+91 9976008508</a>
+            </div>
+          </div>
+
+          <div class="contact-socials mt-4">
+            <a href="https://www.linkedin.com/in/mani03ms/" target="_blank" class="contact-social-link">
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/Manikandan0328" target="_blank" class="contact-social-link">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="contact-form-wrap glass-card">
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group-custom">
+                  <label>Your Name</label>
+                  <input type="text" class="form-input-custom" id="formName" placeholder="John Doe" required />
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-custom">
+                  <label>Email Address</label>
+                  <input type="email" class="form-input-custom" id="formEmail" placeholder="john@example.com" required />
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <label>Subject</label>
+                  <input type="text" class="form-input-custom" id="formSubject" placeholder="What's this about?" required />
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <label>Message</label>
+                  <textarea class="form-input-custom" id="formMessage" rows="5" placeholder="Tell me about your project or inquiry…" required></textarea>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-primary-hero w-100">
+                  <i class="fas fa-paper-plane me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-md-4">
+        <a class="brand-logo" href="#home">
+          <span class="brand-icon">M</span>
+          <span class="brand-text">anikandan</span>
+        </a>
+        <p class="footer-desc mt-2">Software Engineer crafting elegant, scalable digital solutions.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/mani03ms/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Manikandan0328" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:smanikandanmani123@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Manikandan. All Rights Reserved. Crafted with <i class="fas fa-heart text-accent"></i> in Chennai.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Success Toast -->
+<div class="toast-msg" id="successToast">
+  <i class="fas fa-check-circle me-2"></i>Message sent! I'll get back to you soon.
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
 </html>
