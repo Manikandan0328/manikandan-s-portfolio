@@ -342,12 +342,26 @@ function initContactForm() {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending…';
     btn.disabled = true;
 
-    setTimeout(() => {
-      btn.innerHTML = orig;
-      btn.disabled = false;
-      form.reset();
-      showToast(toast);
-    }, 1500);
+emailjs.send(
+  "service_c0vrjdx",
+  "template_mvxrhpu",
+  {
+    from_name: name.value,
+    from_email: email.value,
+    subject: subject.value,
+    message: message.value
+  }
+).then(() => {
+  btn.innerHTML = orig;
+  btn.disabled = false;
+  form.reset();
+  showToast(toast);
+}).catch((error) => {
+  console.error(error);
+  btn.innerHTML = orig;
+  btn.disabled = false;
+  alert("Failed to send message.");
+});
   });
 
   // Remove error on input
