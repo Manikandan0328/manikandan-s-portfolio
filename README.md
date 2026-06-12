@@ -40,7 +40,7 @@ This is a fully responsive, production-ready personal portfolio website for **Ma
 > Deploy to GitHub Pages, Netlify, or Vercel to get a live URL.
 
 ```
-https://manikandan0328.github.io/portfolio
+https://manikandan-s-portfolio.vercel.app/
 ```
 
 ---
