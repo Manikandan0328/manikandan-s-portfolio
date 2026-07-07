@@ -738,6 +738,69 @@
     </div>
   </div>
 </footer>
+<!-- ══════════════════════════════════════════
+     AI PORTFOLIO ASSISTANT BOT
+══════════════════════════════════════════ -->
+
+<!-- Launcher FAB -->
+<button class="bot-fab" id="botFab" aria-label="Chat with AI assistant">
+  <span class="bot-fab-ico open"><i class="fas fa-robot"></i></span>
+  <span class="bot-fab-ico close"><i class="fas fa-times"></i></span>
+  <span class="bot-notif" id="botNotif">1</span>
+</button>
+
+<!-- Chat Window -->
+<div class="bot-window" id="botWindow" aria-hidden="true">
+
+  <!-- Header -->
+  <div class="bot-header">
+    <div class="bot-hd-left">
+      <div class="bot-avatar-sm">
+        <i class="fas fa-robot"></i>
+        <span class="bot-online"></span>
+      </div>
+      <div>
+        <p class="bot-hd-name">Mani's AI Assistant</p>
+        <p class="bot-hd-status">Powered by Claude · Always online</p>
+      </div>
+    </div>
+    <button class="bot-close" id="botClose" aria-label="Close chat">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- Quick suggestion chips (shown before first user message) -->
+  <div class="bot-chips" id="botChips">
+    <p class="chips-label">Ask me anything about Manikandan 👇</p>
+    <div class="chips-row">
+      <button class="chip" data-q="What are Manikandan's top skills?">🛠️ Top Skills</button>
+      <button class="chip" data-q="Tell me about Manikandan's work experience.">💼 Experience</button>
+      <button class="chip" data-q="What projects has Manikandan built?">🚀 Projects</button>
+      <button class="chip" data-q="What is Manikandan's educational background?">🎓 Education</button>
+      <button class="chip" data-q="How can I contact Manikandan?">📬 Contact</button>
+      <button class="chip" data-q="Is Manikandan available for freelance or full-time work?">💡 Availability</button>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div class="bot-messages" id="botMessages"></div>
+
+  <!-- Input -->
+  <div class="bot-input-wrap">
+    <input
+      type="text"
+      id="botInput"
+      class="bot-input"
+      placeholder="Ask about skills, projects, contact…"
+      autocomplete="off"
+      maxlength="300"
+    />
+    <button class="bot-send" id="botSend" aria-label="Send">
+      <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+  <p class="bot-disclaimer">Smart local assistant · No internet required · Knows everything about Manikandan</p>
+</div>
 
 <!-- Back to Top -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
