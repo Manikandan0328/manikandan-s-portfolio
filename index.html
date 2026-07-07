@@ -2,199 +2,149 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Manikandan – Software Engineer at Splendin Software, Chennai. Specializing in modern web applications, scalable backend systems, and enterprise software." />
-  <meta name="keywords" content="Manikandan, Software Engineer, ASP.NET, C#, Web Developer, Chennai, India" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="Manikandan – Software Engineer at Splendin Software, Chennai." />
   <title>Manikandan | Software Engineer</title>
 
-  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-
-  <!-- Bootstrap 5 -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ========== CANVAS BACKGROUND ========== -->
-<canvas id="particleCanvas"></canvas>
+<canvas id="bgCanvas"></canvas>
 
-<!-- ========== NAVBAR ========== -->
-<nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand brand-logo" href="#home">
-      <span class="brand-icon">M</span>
-      <span class="brand-text">anikandan</span>
+<!-- ── NAVBAR ── -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">
+      <span class="brand-dot">M</span>
+      <span>anikandan</span>
     </a>
-
-    <div class="d-flex align-items-center gap-3 ms-auto order-lg-3">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <i class="fas fa-moon" id="themeIcon"></i>
+    <div class="nav-right">
+      <button class="btn-theme" id="themeBtn" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="themeIco"></i>
       </button>
-      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <button class="btn-menu" id="menuBtn" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
-
-    <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
-      <ul class="navbar-nav mx-auto gap-lg-1">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
+  </div>
+  <!-- mobile drawer -->
+  <div class="nav-drawer" id="navDrawer">
+    <a href="#home"       class="drawer-link">Home</a>
+    <a href="#about"      class="drawer-link">About</a>
+    <a href="#experience" class="drawer-link">Experience</a>
+    <a href="#skills"     class="drawer-link">Skills</a>
+    <a href="#projects"   class="drawer-link">Projects</a>
+    <a href="#education"  class="drawer-link">Education</a>
+    <a href="#contact"    class="drawer-link">Contact</a>
   </div>
 </nav>
 
-<!-- ========== HERO ========== -->
-<section class="hero-section" id="home">
-  <div class="hero-orb orb-1"></div>
-  <div class="hero-orb orb-2"></div>
-  <div class="hero-orb orb-3"></div>
+<!-- ── HERO ── -->
+<section id="home" class="hero">
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
 
-  <div class="container hero-container">
-    <div class="row align-items-center min-vh-100 py-5">
-      <div class="col-lg-7 hero-text-col">
-       
-        <p class="hero-greeting" data-aos="fade-up" data-aos-delay="150">Hello, I'm</p>
-        <h1 class="hero-name" data-aos="fade-up" data-aos-delay="200">
-          <span class="name-gradient">Manikandan</span>
-        </h1>
-        <div class="hero-role" data-aos="fade-up" data-aos-delay="250">
-          <span class="role-prefix">—</span>
-          <span id="typedText"></span><span class="cursor-blink">|</span>
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- avatar first on mobile (top) -->
+      <div class="hero-avatar-wrap">
+        <div class="avatar-ring">
+          <div class="avatar-core">MK</div>
         </div>
-        <p class="hero-desc" data-aos="fade-up" data-aos-delay="300">
-          Passionate Software Engineer specializing in modern web applications, scalable backend systems, and user-centric digital experiences.
+        <span class="badge-float b1"><i class="fab fa-js-square"></i> JS</span>
+        <span class="badge-float b2"><i class="fas fa-database"></i> SQL</span>
+        <span class="badge-float b3">.NET</span>
+        <span class="badge-float b4"><i class="fab fa-git-alt"></i> Git</span>
+      </div>
+
+      <!-- text -->
+      <div class="hero-text">
+        <div class="hero-pill">
+          <span class="live-dot"></span> Open to opportunities
+        </div>
+        <p class="hero-hello">Hello, I'm</p>
+        <h1 class="hero-name">Manikandan</h1>
+        <p class="hero-role">
+          <span id="typedRole"></span><span class="blink">|</span>
         </p>
-        <div class="hero-actions" data-aos="fade-up" data-aos-delay="350">
-          <a href="./Manikandan_Resume.pdf"  class="btn-primary-hero" download target="_blank">
-            <i class="fas fa-download me-2"></i>Download Resume
-          </a>
-          <a href="#projects" class="btn-outline-hero">
-            View Projects <i class="fas fa-arrow-right ms-2"></i>
-          </a>
-        </div>
-        <div class="hero-socials" data-aos="fade-up" data-aos-delay="400">
-          <a href="https://www.linkedin.com/in/mani03ms/" target="_blank" class="social-pill" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/Manikandan0328" target="_blank" class="social-pill" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="mailto:smanikandanmani123@gmail.com" class="social-pill" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="col-lg-5 hero-visual-col" data-aos="fade-left" data-aos-delay="300">
-        <div class="hero-visual">
-          <div class="avatar-ring">
-            <div class="avatar-inner">
-              <div class="avatar-initials">MS</div>
-            </div>
-          </div>
-          <!-- Floating tech badges -->
-          <div class="tech-badge badge-1"><i class="fas fa-code"></i> C#</div>
-          <div class="tech-badge badge-2"><i class="fas fa-database"></i> MongoDB</div>
-          <div class="tech-badge badge-3"><i class="fab fa-js"></i> Java Script</div>
-          <div class="tech-badge badge-4"><i class="fab fa-git-alt"></i> Git</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="scroll-indicator">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-</section>
-
-<!-- ========== ABOUT ========== -->
-<section class="section-pad" id="about">
-  <div class="container">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">Who I Am</span>
-      <h2 class="section-title">About <span class="text-accent">Me</span></h2>
-    </div>
-
-    <div class="row g-5 align-items-center mt-2">
-      <div class="col-lg-5" data-aos="fade-right">
-        <div class="about-card glass-card">
-          <div class="about-card-header">
-            <div class="about-avatar">MS</div>
-            <div>
-              <h4 class="mb-0">Manikandan</h4>
-              <p class="text-muted-custom mb-0">Software Engineer</p>
-            </div>
-          </div>
-          <hr class="divider" />
-          <div class="about-info-list">
-            <div class="info-item">
-              <i class="fas fa-building"></i>
-              <span>Splendin Software Pvt. Ltd.</span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Chennai, Tamil Nadu, India</span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-graduation-cap"></i>
-              <span>MCA – Alagappa University</span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-envelope"></i>
-              <span>smanikandanmani123@gmail.com</span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-phone"></i>
-              <span>+91 9976008508</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-7" data-aos="fade-left">
-        <p class="about-text">
-          I'm a <strong>Software Engineer</strong> at Splendin Software Private Limited, Chennai, with a strong foundation in web development, software engineering, and problem-solving.
+        <p class="hero-bio">
+          Software Engineer specialising in modern web apps, scalable backend systems, and user-centric digital experiences.
         </p>
-        <p class="about-text">
-          My journey started with Computer Science and evolved into building scalable web applications, responsive user interfaces, and enterprise software solutions. I enjoy learning modern technologies, optimizing performance, and creating impactful digital products that solve real-world business problems.
-        </p>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary">
+            <i class="fas fa-download"></i> Resume
+          </a>
+          <a href="#projects" class="btn-ghost">
+            Projects <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/mani03ms/" target="_blank" class="soc-ico" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Manikandan0328"      target="_blank" class="soc-ico" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:smanikandanmani123@gmail.com"               class="soc-ico" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
 
-        <div class="stats-grid mt-4">
-          <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="100">
-            <div class="stat-number" data-count="1">0</div>
-            <div class="stat-label">Year Experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-label">Who I Am</span>
+      <h2 class="sec-title">About <span class="grad-text">Me</span></h2>
+    </div>
+
+    <div class="about-grid">
+      <!-- profile card -->
+      <div class="card-glass profile-card">
+        <div class="profile-top">
+          <div class="profile-av">MK</div>
+          <div>
+            <p class="profile-name">Manikandan</p>
+            <p class="profile-role">Software Engineer</p>
           </div>
-          <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="200">
-            <div class="stat-number" data-count="3">0</div>
-            <div class="stat-label">Projects Built</div>
+        </div>
+        <hr class="card-hr" />
+        <ul class="profile-list">
+          <li><i class="fas fa-building"></i><span>Splendin Software Pvt. Ltd.</span></li>
+          <li><i class="fas fa-map-marker-alt"></i><span>Chennai, Tamil Nadu</span></li>
+          <li><i class="fas fa-graduation-cap"></i><span>MCA – Alagappa University</span></li>
+          <li><i class="fas fa-envelope"></i><span>smanikandanmani123@gmail.com</span></li>
+          <li><i class="fas fa-phone"></i><span>+91 9976008508</span></li>
+        </ul>
+      </div>
+
+      <!-- text + stats -->
+      <div class="about-body">
+        <p class="about-p">I'm a <strong>Software Engineer</strong> at Splendin Software Private Limited, Chennai, with a strong foundation in web development, software engineering, and problem-solving.</p>
+        <p class="about-p">My journey started with Computer Science and evolved into building scalable web applications, responsive interfaces, and enterprise software solutions.</p>
+
+        <div class="stats-row">
+          <div class="stat-box card-glass">
+            <span class="stat-n" data-to="1">0</span>
+            <span class="stat-l">Year Exp.</span>
           </div>
-          <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="300">
-            <div class="stat-number" data-count="15">0</div>
-            <div class="stat-label">Technologies</div>
+          <div class="stat-box card-glass">
+            <span class="stat-n" data-to="3">0</span>
+            <span class="stat-l">Projects</span>
           </div>
-          <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="400">
-            <div class="stat-number" data-count="100">0</div>
-            <div class="stat-label">% Dedication</div>
+          <div class="stat-box card-glass">
+            <span class="stat-n" data-to="15">0</span>
+            <span class="stat-l">Technologies</span>
+          </div>
+          <div class="stat-box card-glass">
+            <span class="stat-n" data-to="100">0</span>
+            <span class="stat-l">% Commitment</span>
           </div>
         </div>
       </div>
@@ -202,359 +152,172 @@
   </div>
 </section>
 
-<!-- ========== EXPERIENCE ========== -->
-<section class="section-pad section-alt" id="experience">
+<!-- ── EXPERIENCE ── -->
+<section id="experience" class="section section-alt">
   <div class="container">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">My Journey</span>
-      <h2 class="section-title">Work <span class="text-accent">Experience</span></h2>
+    <div class="sec-head">
+      <span class="sec-label">Journey</span>
+      <h2 class="sec-title">Work <span class="grad-text">Experience</span></h2>
     </div>
 
-    <div class="timeline mt-5">
-      <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card glass-card">
-          <div class="timeline-header">
-            <div class="company-badge">
-              <div class="company-logo-ph">S</div>
-              <div>
-                <h4 class="job-title">Software Engineer</h4>
-                <p class="company-name">Splendin Software Private Limited</p>
-              </div>
-            </div>
-            <div class="job-meta">
-              <span class="job-location"><i class="fas fa-map-marker-alt me-1"></i>Chennai, TN</span>
-              <span class="job-period"><i class="fas fa-calendar me-1"></i>2026 – Present</span>
-            </div>
-          </div>
-          <div class="job-desc">
-            <div class="responsibility-grid">
-              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Developing enterprise-grade web applications</span></div>
-              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Building scalable backend solutions</span></div>
-              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Implementing secure authentication systems</span></div>
-              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Developing responsive user interfaces</span></div>
-              <div class="resp-item"><i class="fas fa-check-circle"></i><span>API Integration and Optimization</span></div>
-              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Database Design and Management</span></div>
-              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Bug Fixing and Performance Enhancement</span></div>
-              <div class="resp-item"><i class="fas fa-check-circle"></i><span>Agile Development Practices</span></div>
-            </div>
-          </div>
-          <div class="tech-tags mt-3">
-            <span class="tech-tag">ASP.NET Core</span>
-            <span class="tech-tag">C#</span>
-            <span class="tech-tag">MongoDB</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Bootstrap</span>
+    <div class="exp-card card-glass">
+      <div class="exp-top">
+        <div class="exp-logo">S</div>
+        <div class="exp-info">
+          <h3 class="exp-title">Software Engineer</h3>
+          <p class="exp-company">Splendin Software Private Limited</p>
+          <div class="exp-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Chennai, TN</span>
+            <span><i class="fas fa-calendar"></i> 2025 – Present</span>
           </div>
         </div>
+      </div>
+
+      <div class="exp-resp">
+        <div class="resp-row"><i class="fas fa-check-circle"></i><span>Developing enterprise-grade web applications</span></div>
+        <div class="resp-row"><i class="fas fa-check-circle"></i><span>Building scalable backend solutions</span></div>
+        <div class="resp-row"><i class="fas fa-check-circle"></i><span>Implementing secure authentication systems</span></div>
+        <div class="resp-row"><i class="fas fa-check-circle"></i><span>Developing responsive user interfaces</span></div>
+        <div class="resp-row"><i class="fas fa-check-circle"></i><span>API Integration and Optimisation</span></div>
+        <div class="resp-row"><i class="fas fa-check-circle"></i><span>Database Design and Management</span></div>
+        <div class="resp-row"><i class="fas fa-check-circle"></i><span>Bug Fixing and Performance Enhancement</span></div>
+        <div class="resp-row"><i class="fas fa-check-circle"></i><span>Agile Development Practices</span></div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag">ASP.NET Core</span>
+        <span class="tag">C#</span>
+        <span class="tag">SQL Server</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Bootstrap</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== SKILLS ========== -->
-<section class="section-pad" id="skills">
+<!-- ── SKILLS ── -->
+<section id="skills" class="section">
   <div class="container">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">My Toolkit</span>
-      <h2 class="section-title">Technical <span class="text-accent">Skills</span></h2>
+    <div class="sec-head">
+      <span class="sec-label">Toolkit</span>
+      <h2 class="sec-title">Technical <span class="grad-text">Skills</span></h2>
     </div>
 
-    <div class="skills-tabs mt-5" data-aos="fade-up">
-      <div class="skills-tab-buttons">
-        <button class="skills-tab-btn active" data-tab="frontend">Frontend</button>
-        <button class="skills-tab-btn" data-tab="backend">Backend</button>
-        <button class="skills-tab-btn" data-tab="database">Database</button>
-        <button class="skills-tab-btn" data-tab="tools">Tools</button>
-        <button class="skills-tab-btn" data-tab="concepts">Concepts</button>
-      </div>
+    <!-- tab pills -->
+    <div class="skill-tabs" role="tablist">
+      <button class="stab active" data-tab="frontend">Frontend</button>
+      <button class="stab" data-tab="backend">Backend</button>
+      <button class="stab" data-tab="database">Database</button>
+      <button class="stab" data-tab="tools">Tools</button>
+      <button class="stab" data-tab="concepts">Concepts</button>
+    </div>
 
-      <div class="skills-tab-content active" id="tab-frontend">
-        <div class="skills-grid">
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#E44D26"><i class="fab fa-html5"></i></div>
-              <span class="skill-name">HTML5</span>
-              <span class="skill-pct">90%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:90%;--clr:#E44D26"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#264DE4"><i class="fab fa-css3-alt"></i></div>
-              <span class="skill-name">CSS3</span>
-              <span class="skill-pct">85%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:85%;--clr:#264DE4"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#F0DB4F"><i class="fab fa-js-square"></i></div>
-              <span class="skill-name">JavaScript</span>
-              <span class="skill-pct">80%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:80%;--clr:#F0DB4F"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#7952B3"><i class="fab fa-bootstrap"></i></div>
-              <span class="skill-name">Bootstrap</span>
-              <span class="skill-pct">88%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:88%;--clr:#7952B3"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="250">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#06B6D4"><i class="fas fa-mobile-alt"></i></div>
-              <span class="skill-name">Responsive Design</span>
-              <span class="skill-pct">90%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:90%;--clr:#06B6D4"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-tab-content" id="tab-backend">
-        <div class="skills-grid">
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#512BD4"><i class="fas fa-layer-group"></i></div>
-              <span class="skill-name">ASP.NET MVC</span>
-              <span class="skill-pct">82%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:82%;--clr:#512BD4"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#7B2D8B"><i class="fas fa-rocket"></i></div>
-              <span class="skill-name">ASP.NET Core</span>
-              <span class="skill-pct">78%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:78%;--clr:#7B2D8B"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#178600"><i class="fas fa-code"></i></div>
-              <span class="skill-name">C#</span>
-              <span class="skill-pct">80%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:80%;--clr:#178600"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#4F46E5"><i class="fas fa-plug"></i></div>
-              <span class="skill-name">REST API</span>
-              <span class="skill-pct">75%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:75%;--clr:#4F46E5"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-tab-content" id="tab-database">
-        <div class="skills-grid">
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#CC2927"><i class="fas fa-database"></i></div>
-              <span class="skill-name">MongoDB Compass</span>
-              <span class="skill-pct">82%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:82%;--clr:#CC2927"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#00758F"><i class="fas fa-table"></i></div>
-              <span class="skill-name">MySQL</span>
-              <span class="skill-pct">78%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:78%;--clr:#00758F"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-tab-content" id="tab-tools">
-        <div class="skills-grid">
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#F05032"><i class="fab fa-git-alt"></i></div>
-              <span class="skill-name">Git</span>
-              <span class="skill-pct">80%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:80%;--clr:#F05032"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#181717"><i class="fab fa-github"></i></div>
-              <span class="skill-name">GitHub</span>
-              <span class="skill-pct">82%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:82%;--clr:#8B5CF6"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#0078D4"><i class="fas fa-terminal"></i></div>
-              <span class="skill-name">Visual Studio</span>
-              <span class="skill-pct">85%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:85%;--clr:#0078D4"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#007ACC"><i class="fas fa-code"></i></div>
-              <span class="skill-name">VS Code</span>
-              <span class="skill-pct">88%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:88%;--clr:#007ACC"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="250">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#205081"><i class="fas fa-code-branch"></i></div>
-              <span class="skill-name">SourceTree</span>
-              <span class="skill-pct">75%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:75%;--clr:#205081"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-tab-content" id="tab-concepts">
-        <div class="skills-grid">
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#4F46E5"><i class="fas fa-lock"></i></div>
-              <span class="skill-name">Authentication & Authorization</span>
-              <span class="skill-pct">80%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:80%;--clr:#4F46E5"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#06B6D4"><i class="fas fa-cubes"></i></div>
-              <span class="skill-name">MVC Architecture</span>
-              <span class="skill-pct">85%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:85%;--clr:#06B6D4"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#8B5CF6"><i class="fas fa-shapes"></i></div>
-              <span class="skill-name">OOP Concepts</span>
-              <span class="skill-pct">82%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:82%;--clr:#8B5CF6"></div></div>
-          </div>
-          <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="skill-header">
-              <div class="skill-icon-wrap" style="--clr:#10B981"><i class="fas fa-puzzle-piece"></i></div>
-              <span class="skill-name">Problem Solving</span>
-              <span class="skill-pct">85%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:85%;--clr:#10B981"></div></div>
-          </div>
-        </div>
+    <!-- panels -->
+    <div class="skill-panel active" id="sp-frontend">
+      <div class="skill-list">
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#E44D26"><i class="fab fa-html5"></i></span><span>HTML5</span></div><div class="sk-bar"><div class="sk-fill" style="--w:90%"></div></div><span class="sk-pct">90%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#264DE4"><i class="fab fa-css3-alt"></i></span><span>CSS3</span></div><div class="sk-bar"><div class="sk-fill" style="--w:85%"></div></div><span class="sk-pct">85%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#F0DB4F"><i class="fab fa-js-square"></i></span><span>JavaScript</span></div><div class="sk-bar"><div class="sk-fill" style="--w:80%"></div></div><span class="sk-pct">80%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#7952B3"><i class="fab fa-bootstrap"></i></span><span>Bootstrap</span></div><div class="sk-bar"><div class="sk-fill" style="--w:88%"></div></div><span class="sk-pct">88%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#06B6D4"><i class="fas fa-mobile-alt"></i></span><span>Responsive Design</span></div><div class="sk-bar"><div class="sk-fill" style="--w:90%"></div></div><span class="sk-pct">90%</span></div>
       </div>
     </div>
+
+    <div class="skill-panel" id="sp-backend">
+      <div class="skill-list">
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#512BD4"><i class="fas fa-layer-group"></i></span><span>ASP.NET MVC</span></div><div class="sk-bar"><div class="sk-fill" style="--w:82%"></div></div><span class="sk-pct">82%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#7B2D8B"><i class="fas fa-rocket"></i></span><span>ASP.NET Core</span></div><div class="sk-bar"><div class="sk-fill" style="--w:78%"></div></div><span class="sk-pct">78%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#10B981"><i class="fas fa-code"></i></span><span>C#</span></div><div class="sk-bar"><div class="sk-fill" style="--w:80%"></div></div><span class="sk-pct">80%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#4F46E5"><i class="fas fa-plug"></i></span><span>REST API</span></div><div class="sk-bar"><div class="sk-fill" style="--w:75%"></div></div><span class="sk-pct">75%</span></div>
+      </div>
+    </div>
+
+    <div class="skill-panel" id="sp-database">
+      <div class="skill-list">
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#CC2927"><i class="fas fa-database"></i></span><span>SQL Server</span></div><div class="sk-bar"><div class="sk-fill" style="--w:82%"></div></div><span class="sk-pct">82%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#00758F"><i class="fas fa-table"></i></span><span>MySQL</span></div><div class="sk-bar"><div class="sk-fill" style="--w:78%"></div></div><span class="sk-pct">78%</span></div>
+      </div>
+    </div>
+
+    <div class="skill-panel" id="sp-tools">
+      <div class="skill-list">
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#F05032"><i class="fab fa-git-alt"></i></span><span>Git</span></div><div class="sk-bar"><div class="sk-fill" style="--w:80%"></div></div><span class="sk-pct">80%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#8B5CF6"><i class="fab fa-github"></i></span><span>GitHub</span></div><div class="sk-bar"><div class="sk-fill" style="--w:82%"></div></div><span class="sk-pct">82%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#0078D4"><i class="fas fa-terminal"></i></span><span>Visual Studio</span></div><div class="sk-bar"><div class="sk-fill" style="--w:85%"></div></div><span class="sk-pct">85%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#007ACC"><i class="fas fa-code"></i></span><span>VS Code</span></div><div class="sk-bar"><div class="sk-fill" style="--w:88%"></div></div><span class="sk-pct">88%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#205081"><i class="fas fa-code-branch"></i></span><span>SourceTree</span></div><div class="sk-bar"><div class="sk-fill" style="--w:75%"></div></div><span class="sk-pct">75%</span></div>
+      </div>
+    </div>
+
+    <div class="skill-panel" id="sp-concepts">
+      <div class="skill-list">
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#4F46E5"><i class="fas fa-lock"></i></span><span>Authentication &amp; Authorisation</span></div><div class="sk-bar"><div class="sk-fill" style="--w:80%"></div></div><span class="sk-pct">80%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#06B6D4"><i class="fas fa-cubes"></i></span><span>MVC Architecture</span></div><div class="sk-bar"><div class="sk-fill" style="--w:85%"></div></div><span class="sk-pct">85%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#8B5CF6"><i class="fas fa-shapes"></i></span><span>OOP Concepts</span></div><div class="sk-bar"><div class="sk-fill" style="--w:82%"></div></div><span class="sk-pct">82%</span></div>
+        <div class="skill-row"><div class="sk-meta"><span class="sk-ico" style="color:#10B981"><i class="fas fa-puzzle-piece"></i></span><span>Problem Solving</span></div><div class="sk-bar"><div class="sk-fill" style="--w:85%"></div></div><span class="sk-pct">85%</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ========== PROJECTS ========== -->
-<section class="section-pad section-alt" id="projects">
+<!-- ── PROJECTS ── -->
+<section id="projects" class="section section-alt">
   <div class="container">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">What I've Built</span>
-      <h2 class="section-title">Featured <span class="text-accent">Projects</span></h2>
+    <div class="sec-head">
+      <span class="sec-label">Portfolio</span>
+      <h2 class="sec-title">Featured <span class="grad-text">Projects</span></h2>
     </div>
 
-    <div class="row g-4 mt-3">
+    <div class="proj-grid">
 
-      <!-- Project 1 -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="project-card glass-card h-100">
-          <div class="project-img-wrap">
-            <div class="project-img-ph" style="--c1:#4F46E5;--c2:#06B6D4">
-              <i class="fas fa-leaf project-icon"></i>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="proj-btn"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
-              <a href="https://github.com/Manikandan0328" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github me-1"></i>GitHub</a>
-            </div>
+      <div class="proj-card card-glass">
+        <div class="proj-img" style="--c1:#4F46E5;--c2:#06B6D4">
+          <i class="fas fa-leaf"></i>
+          <div class="proj-hover">
+            <a href="#" class="btn-primary sm">Live Demo</a>
+            <a href="https://github.com/Manikandan0328" target="_blank" class="btn-ghost sm">GitHub</a>
           </div>
-          <div class="project-body">
-            <h4 class="project-title">E-Flora</h4>
-            <p class="project-desc">A comprehensive plant database with QR integration, PDF download support, and fully responsive design for easy access across all devices.</p>
-            <div class="project-features">
-              <span><i class="fas fa-check"></i> Plant database</span>
-              <span><i class="fas fa-check"></i> QR integration</span>
-              <span><i class="fas fa-check"></i> PDF download</span>
-            </div>
-            <div class="tech-tags mt-3">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">MySQL</span>
-            </div>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">E-Flora</h3>
+          <p class="proj-desc">Plant database with QR integration, PDF download, and fully responsive design.</p>
+          <div class="tag-row">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">MySQL</span>
           </div>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="project-card glass-card h-100">
-          <div class="project-img-wrap">
-            <div class="project-img-ph" style="--c1:#8B5CF6;--c2:#4F46E5">
-              <i class="fas fa-rocket project-icon"></i>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="proj-btn"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
-              <a href="https://github.com/Manikandan0328" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github me-1"></i>GitHub</a>
-            </div>
+      <div class="proj-card card-glass">
+        <div class="proj-img" style="--c1:#8B5CF6;--c2:#4F46E5">
+          <i class="fas fa-rocket"></i>
+          <div class="proj-hover">
+            <a href="#" class="btn-primary sm">Live Demo</a>
+            <a href="https://github.com/Manikandan0328" target="_blank" class="btn-ghost sm">GitHub</a>
           </div>
-          <div class="project-body">
-            <h4 class="project-title">Startup User Interface</h4>
-            <p class="project-desc">A modern corporate website with mobile-first design philosophy and rich interactive UI components for startup brand presentation.</p>
-            <div class="project-features">
-              <span><i class="fas fa-check"></i> Corporate website</span>
-              <span><i class="fas fa-check"></i> Mobile-first</span>
-              <span><i class="fas fa-check"></i> Interactive UI</span>
-            </div>
-            <div class="tech-tags mt-3">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Bootstrap</span>
-            </div>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Startup UI</h3>
+          <p class="proj-desc">Corporate website with mobile-first design and interactive UI components.</p>
+          <div class="tag-row">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span>
           </div>
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="project-card glass-card h-100">
-          <div class="project-img-wrap">
-            <div class="project-img-ph" style="--c1:#06B6D4;--c2:#0891B2">
-              <i class="fas fa-university project-icon"></i>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="proj-btn"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
-              <a href="https://github.com/Manikandan0328" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github me-1"></i>GitHub</a>
-            </div>
+      <div class="proj-card card-glass">
+        <div class="proj-img" style="--c1:#06B6D4;--c2:#0891B2">
+          <i class="fas fa-university"></i>
+          <div class="proj-hover">
+            <a href="#" class="btn-primary sm">Live Demo</a>
+            <a href="https://github.com/Manikandan0328" target="_blank" class="btn-ghost sm">GitHub</a>
           </div>
-          <div class="project-body">
-            <h4 class="project-title">Departmental Portal</h4>
-            <p class="project-desc">Full-featured academic portal with student management, staff portal, material sharing system, and secure authentication.</p>
-            <div class="project-features">
-              <span><i class="fas fa-check"></i> Student management</span>
-              <span><i class="fas fa-check"></i> Staff portal</span>
-              <span><i class="fas fa-check"></i> Authentication</span>
-            </div>
-            <div class="tech-tags mt-3">
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-            </div>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Departmental Portal</h3>
+          <p class="proj-desc">Academic portal with student management, staff portal, and authentication.</p>
+          <div class="tag-row">
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
           </div>
         </div>
       </div>
@@ -563,49 +326,45 @@
   </div>
 </section>
 
-<!-- ========== EDUCATION ========== -->
-<section class="section-pad" id="education">
+<!-- ── EDUCATION ── -->
+<section id="education" class="section">
   <div class="container">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">Academic Background</span>
-      <h2 class="section-title">My <span class="text-accent">Education</span></h2>
+    <div class="sec-head">
+      <span class="sec-label">Academic Background</span>
+      <h2 class="sec-title">My <span class="grad-text">Education</span></h2>
     </div>
 
-    <div class="edu-timeline mt-5">
+    <div class="edu-list">
 
-      <div class="edu-item" data-aos="fade-right" data-aos-delay="100">
-        <div class="edu-marker">
+      <div class="edu-item">
+        <div class="edu-aside">
           <div class="edu-dot"></div>
           <div class="edu-line"></div>
         </div>
-        <div class="edu-card glass-card">
-          <div class="edu-badge">Postgraduate</div>
-          <h4 class="edu-degree">Master of Computer Applications (MCA)</h4>
-          <p class="edu-institution"><i class="fas fa-university me-2"></i>Alagappa University</p>
-          <div class="edu-period"><i class="fas fa-calendar-alt me-2"></i>2023 – 2025</div>
-          <p class="edu-desc">Advanced studies in software engineering, data structures, algorithms, database management, and enterprise application development.</p>
-          <div class="tech-tags mt-3">
-            <span class="tech-tag">Software Engineering</span>
-            <span class="tech-tag">Data Structures</span>
-            <span class="tech-tag">DBMS</span>
+        <div class="edu-card card-glass">
+          <span class="edu-badge">Postgraduate</span>
+          <h3 class="edu-deg">Master of Computer Applications (MCA)</h3>
+          <p class="edu-uni"><i class="fas fa-university"></i> Alagappa University</p>
+          <p class="edu-yr"><i class="fas fa-calendar-alt"></i> 2023 – 2025</p>
+          <p class="edu-desc">Advanced studies in software engineering, data structures, algorithms, DBMS, and enterprise application development.</p>
+          <div class="tag-row mt-2">
+            <span class="tag">Software Engineering</span><span class="tag">Data Structures</span><span class="tag">DBMS</span>
           </div>
         </div>
       </div>
 
-      <div class="edu-item" data-aos="fade-right" data-aos-delay="200">
-        <div class="edu-marker">
+      <div class="edu-item">
+        <div class="edu-aside">
           <div class="edu-dot"></div>
         </div>
-        <div class="edu-card glass-card">
-          <div class="edu-badge" style="--badge-clr:#06B6D4">Undergraduate</div>
-          <h4 class="edu-degree">Bachelor of Science in Computer Science (B.Sc.)</h4>
-          <p class="edu-institution"><i class="fas fa-university me-2"></i>JJ College of Arts and Science</p>
-          <div class="edu-period"><i class="fas fa-calendar-alt me-2"></i>2020 – 2023</div>
-          <p class="edu-desc">Foundational studies in computer science, programming fundamentals, web technologies, and problem-solving methodologies.</p>
-          <div class="tech-tags mt-3">
-            <span class="tech-tag">Programming</span>
-            <span class="tech-tag">Web Technologies</span>
-            <span class="tech-tag">Mathematics</span>
+        <div class="edu-card card-glass">
+          <span class="edu-badge cyan">Undergraduate</span>
+          <h3 class="edu-deg">B.Sc. Computer Science</h3>
+          <p class="edu-uni"><i class="fas fa-university"></i> JJ College of Arts and Science</p>
+          <p class="edu-yr"><i class="fas fa-calendar-alt"></i> 2020 – 2023</p>
+          <p class="edu-desc">Foundations in programming, web technologies, mathematics, and problem-solving methodologies.</p>
+          <div class="tag-row mt-2">
+            <span class="tag">Programming</span><span class="tag">Web Technologies</span><span class="tag">Mathematics</span>
           </div>
         </div>
       </div>
@@ -614,151 +373,160 @@
   </div>
 </section>
 
-<!-- ========== CONTACT ========== -->
-<section class="section-pad section-alt" id="contact">
+<!-- ── CONTACT ── -->
+<section id="contact" class="section section-alt">
   <div class="container">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">Get In Touch</span>
-      <h2 class="section-title">Let's <span class="text-accent">Connect</span></h2>
+    <div class="sec-head">
+      <span class="sec-label">Get In Touch</span>
+      <h2 class="sec-title">Let's <span class="grad-text">Connect</span></h2>
     </div>
 
-    <div class="row g-5 mt-2">
-      <div class="col-lg-5" data-aos="fade-right">
-        <div class="contact-info glass-card">
-          <h4 class="mb-4">Contact Information</h4>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div>
-              <span class="contact-label">Location</span>
-              <p>Chennai, Tamil Nadu, India</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <span class="contact-label">Email</span>
-              <a href="mailto:smanikandanmani123@gmail.com">smanikandanmani123@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-            <div>
-              <span class="contact-label">Phone</span>
-              <a href="tel:+919976008508">+91 9976008508</a>
-            </div>
-          </div>
+    <div class="contact-grid">
 
-          <div class="contact-socials mt-4">
-            <a href="https://www.linkedin.com/in/mani03ms/" target="_blank" class="contact-social-link">
-              <i class="fab fa-linkedin-in"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/Manikandan0328" target="_blank" class="contact-social-link">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-          </div>
+      <div class="card-glass contact-info-card">
+        <h3 class="ci-title">Contact Info</h3>
+        <div class="ci-row">
+          <div class="ci-ico"><i class="fas fa-map-marker-alt"></i></div>
+          <div><span class="ci-label">Location</span><p>Chennai, Tamil Nadu, India</p></div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-ico"><i class="fas fa-envelope"></i></div>
+          <div><span class="ci-label">Email</span><a href="mailto:smanikandanmani123@gmail.com">smanikandanmani123@gmail.com</a></div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-ico"><i class="fas fa-phone"></i></div>
+          <div><span class="ci-label">Phone</span><a href="tel:+919976008508">+91 9976008508</a></div>
+        </div>
+        <div class="ci-socials">
+          <a href="https://www.linkedin.com/in/mani03ms/" target="_blank" class="ci-soc"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          <a href="https://github.com/Manikandan0328"      target="_blank" class="ci-soc"><i class="fab fa-github"></i> GitHub</a>
         </div>
       </div>
 
-      <div class="col-lg-7" data-aos="fade-left">
-        <div class="contact-form-wrap glass-card">
-          <form id="contactForm" novalidate>
-            <div class="row g-3">
-              <div class="col-md-6">
-                <div class="form-group-custom">
-                  <label>Your Name</label>
-                  <input type="text" class="form-input-custom" id="formName" placeholder="Mani" required />
-                  <div class="input-line"></div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group-custom">
-                  <label>Email Address</label>
-                  <input type="email" class="form-input-custom" id="formEmail" placeholder="manikandan@example.com" required />
-                  <div class="input-line"></div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group-custom">
-                  <label>Subject</label>
-                  <input type="text" class="form-input-custom" id="formSubject" placeholder="What's this about?" required />
-                  <div class="input-line"></div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group-custom">
-                  <label>Message</label>
-                  <textarea class="form-input-custom" id="formMessage" rows="5" placeholder="Tell me about your project or inquiry…" required></textarea>
-                  <div class="input-line"></div>
-                </div>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn-primary-hero w-100">
-                  <i class="fas fa-paper-plane me-2"></i>Send Message
-                </button>
-              </div>
+      <div class="card-glass">
+        <form id="contactForm" novalidate>
+          <div class="form-row-2">
+            <div class="fg">
+              <label>Name</label>
+              <input type="text"   id="fName"    class="fi" placeholder="Your name" required />
             </div>
-          </form>
-        </div>
+            <div class="fg">
+              <label>Email</label>
+              <input type="email"  id="fEmail"   class="fi" placeholder="you@email.com" required />
+            </div>
+          </div>
+          <div class="fg">
+            <label>Subject</label>
+            <input type="text" id="fSubject" class="fi" placeholder="Subject" required />
+          </div>
+          <div class="fg">
+            <label>Message</label>
+            <textarea id="fMsg" class="fi" rows="5" placeholder="Your message…" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary w100">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
+<!-- ── FOOTER ── -->
 <footer class="site-footer">
   <div class="container">
-    <div class="row align-items-center g-4">
-      <div class="col-md-4">
-        <a class="brand-logo" href="#home">
-          <span class="brand-icon">M</span>
-          <span class="brand-text">anikandan</span>
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="nav-brand">
+          <span class="brand-dot">M</span><span>anikandan</span>
         </a>
-        <p class="footer-desc mt-2">Software Engineer crafting elegant, scalable digital solutions.</p>
+        <p class="footer-sub">Software Engineer · Chennai</p>
       </div>
-      <div class="col-md-4 text-center">
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="col-md-4 text-md-end">
-        <div class="footer-socials">
-          <a href="https://www.linkedin.com/in/mani03ms/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/Manikandan0328" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="mailto:smanikandanmani123@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
+      <div class="footer-soc">
+        <a href="https://www.linkedin.com/in/mani03ms/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Manikandan0328"      target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:smanikandanmani123@gmail.com"               aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Manikandan. All Rights Reserved. Crafted with <i class="fas fa-heart text-accent"></i> in Chennai.</p>
-    </div>
+    <p class="footer-copy">© 2026 Manikandan. All Rights Reserved.</p>
   </div>
 </footer>
 
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" aria-label="Back to top">
-  <i class="fas fa-arrow-up"></i>
+<button class="btn-top" id="btnTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i> Message sent!</div>
+
+<!-- ══════════════════════════════════════════
+     AI PORTFOLIO ASSISTANT BOT
+══════════════════════════════════════════ -->
+
+<!-- Launcher FAB -->
+<button class="bot-fab" id="botFab" aria-label="Chat with AI assistant">
+  <span class="bot-fab-ico open"><i class="fas fa-robot"></i></span>
+  <span class="bot-fab-ico close"><i class="fas fa-times"></i></span>
+  <span class="bot-notif" id="botNotif">1</span>
 </button>
 
-<!-- Success Toast -->
-<div class="toast-msg" id="successToast">
-  <i class="fas fa-check-circle me-2"></i>Message sent! I'll get back to you soon.
+<!-- Chat Window -->
+<div class="bot-window" id="botWindow" aria-hidden="true">
+
+  <!-- Header -->
+  <div class="bot-header">
+    <div class="bot-hd-left">
+      <div class="bot-avatar-sm">
+        <i class="fas fa-robot"></i>
+        <span class="bot-online"></span>
+      </div>
+      <div>
+        <p class="bot-hd-name">Mani's AI Assistant</p>
+        <p class="bot-hd-status">Powered by Claude · Always online</p>
+      </div>
+    </div>
+    <button class="bot-close" id="botClose" aria-label="Close chat">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- Quick suggestion chips (shown before first user message) -->
+  <div class="bot-chips" id="botChips">
+    <p class="chips-label">Ask me anything about Manikandan 👇</p>
+    <div class="chips-row">
+      <button class="chip" data-q="What are Manikandan's top skills?">🛠️ Top Skills</button>
+      <button class="chip" data-q="Tell me about Manikandan's work experience.">💼 Experience</button>
+      <button class="chip" data-q="What projects has Manikandan built?">🚀 Projects</button>
+      <button class="chip" data-q="What is Manikandan's educational background?">🎓 Education</button>
+      <button class="chip" data-q="How can I contact Manikandan?">📬 Contact</button>
+      <button class="chip" data-q="Is Manikandan available for freelance or full-time work?">💡 Availability</button>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div class="bot-messages" id="botMessages"></div>
+
+  <!-- Input -->
+  <div class="bot-input-wrap">
+    <input
+      type="text"
+      id="botInput"
+      class="bot-input"
+      placeholder="Ask about skills, projects, contact…"
+      autocomplete="off"
+      maxlength="300"
+    />
+    <button class="bot-send" id="botSend" aria-label="Send">
+      <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+  <p class="bot-disclaimer">Smart local assistant · No internet required · Knows everything about Manikandan</p>
 </div>
 
-<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init("SfSsZW3Kr2LRxGHcW");
-</script>
-
-
-  
 </body>
 </html>
