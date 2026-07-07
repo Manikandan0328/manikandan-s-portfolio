@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initContactForm();
   initBackToTop();
+  initBot();  
 });
 
 /* ==============================
